@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Boulangerie de Rapahël</title>
+
+
+  <link rel="stylesheet" href="css/commentairesstyle.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="script/commentaire.js"></script>
+
+</head>
+<body>
+
+<div id="bloc_page">
+
+  <header>
+    <div id="titre_principal">
+      <div id="logo">
+        <a href = "images/boutique_logo.jpg">
+        <img src="images/boutique_logo.png" alt="Logo de la boutique" title ="cliquer pour agrandir" /> </a>
+        <h1> Raphael Boulangerie </h1><br/>
+      </div>
+      
+      <h2> Cacher Lemehadrin </h2> 
+    
+    </div>
+   </header>
+
+  <section>
+    <article>
+  
+    <div id='action'>
+      <button id="valider" class="btn">Laisser un message</button>
+      <button id="retour" class="btn">Retour à la boutique</button>
+    </div>
+
+      <div id="panier">
+ 
+       <section class="container">
+        <article>
+          <h1> Sujet </h1>
+          <table id="tableau" class="table">
+            <thead>
+              <tr>
+                <th>   </th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+          </table>
+  
+          <h1> Commentaires </h1>
+          <div id='commentaires'></div>
+
+        </article>
+      </section>
+      </div>
+      <br/>
+
+
+    </article>
+
+  </section>
+
+  <footer>
+    <div id="coordo">
+      <h1>Coordonnées de Raphaël</h1>
+      <p>+972 53 2552 771</p>
+      <p>+972 53 2552 773</p>
+      <p>Adresse boutique : Rue Hertzl , Haïfa </p>
+      <p> Vous souhaitez envoyer un mail <a href ="mailto:raphaelboulangerie@gmail.com" title="Mail à Rapahël" > à Rapahël</a> ?</p>
+    </div>
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span style="margin-top: -9px;" class="close">&times;</span>
+      <div id="form_contact">
+        <form action="#" id="contact" method="POST">
+            <p>
+                <label for="nom" class="nom">Nom</label>
+                <br /><input id="nom" name="nom" type="text">
+                <span id="msg_nom"></span>
+            </p>
+            <p>
+                <label for="message">Commentaire</label>
+                <br /><textarea id="message" name="message" rows="10" cols="80"></textarea>
+               <span id="msg_message"></span>
+            </p>
+            <p>
+                <input type="submit" class="btn" value="Poster" />
+                <input type="reset" class="btn" value="Reset" />
+            </p>
+        </form>
+        <div id="msg">  
+          <div id="alerte"></div>
+        </div>
+        <span id="msg_all"></span> 
+      </div><!-- end of #form_contact -->
+  </div>
+</div>
+    </footer>
+</div>
+
+
+<script type="text/javascript">
+//modal panier 
+
+var modal = document.getElementById('myModal');
+var btn = document.getElementById("valider");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {
+    modal.style.display = "block";
+    $("#contact").show();
+    $("#alerte").hide();
+}
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+</script>
+</body>
+</html>
