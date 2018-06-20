@@ -1,5 +1,8 @@
 <?php
 //voici une modification du script
+
+
+//nouvelle modification
 /* Connexion Serveur */
 function bdd()
 	{
